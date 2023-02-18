@@ -1,44 +1,98 @@
-import { Link, Outlet } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink, Outlet } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assests/fyp.svg";
 import { ReactComponent as KustLogo } from "../../assests/kust.svg";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./navigation.styles.scss";
 const Navigation = () => {
-  
   return (
     <div className="navigation-page">
       <div className="menu-bar">
-        <Link className="logo-container" to="/">
+        <NavLink className="logo-container" to="/">
           <Logo className="logo" />
-        </Link>
+        </NavLink>
         <div className="nav-container">
-          <Link className="nav-link" to="/">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/"
+          >
             Home
-          </Link>
-          <Link  className="nav-link" to="/aboutus">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/aboutus"
+          >
             About us
-          </Link>
-          <Link className="nav-link" to="/ideas">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/ideas"
+          >
             Ideas
-          </Link>
-          <Link className="nav-link" to="/projects">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/projects"
+          >
             Projects
-          </Link>
-          <Link className="nav-link" to="/impact">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/impact"
+          >
             Impact
-          </Link>
-          <Link className="nav-link" to="/hiretalent">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/hiretalent"
+          >
             Hire talent
-          </Link>
-          <Link className="nav-link" to="/contactus">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/fyp"
+          >
+            FYP
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/contactus"
+          >
             Contact us
-          </Link>
-          <Link className="nav-link" to="/authentication">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "active_tab nav-link" : "nav-link"
+            }
+            to="/authentication"
+          >
             Login
-          </Link>
+          </NavLink>
         </div>
-        <Link className="kust-logo-container" to="/">
-          <KustLogo className="kust-logo" />
-        </Link>
+        <div className="kust-logo-container">
+          <NavLink className="burger-menu-bar" to="#">
+            <FontAwesomeIcon icon={faBars} />
+          </NavLink>
+          <NavLink className="kust-logo-container" to="/">
+            <KustLogo className="kust-logo" />
+          </NavLink>
+        </div>
       </div>
 
       <Outlet />

@@ -1,0 +1,44 @@
+@import "../../colors.scss";
+@import "../../mixin.scss";
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+
+    .project-content {
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom right, $Color-Blue, $Color-White, $Color-Blue);
+        gap: 30px;
+        padding: 30px 40px;
+
+        @include extra-large {
+            padding: 20px 20px;
+        }
+
+        @include large {
+            align-items: center;
+            padding: 20px 10;
+        }
+
+        @include small1 {
+            padding: 10px 5px;
+        }
+    }
+
+    .table-content {
+        width: 100%;
+
+        @include large {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .project-pagination {
+        align-self: flex-end;
+        overflow: hidden;
+    }
+
+}

@@ -1,0 +1,65 @@
+@import "../../colors.scss";
+@import "../../mixin.scss";
+
+.idea-page-container {
+    display: flex;
+    flex-direction: column;
+
+    .ideas-text-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 30px 40px;
+
+        @include medium {
+            padding: 20px 20px;
+        }
+
+        @include small4 {
+            row-gap: 10px;
+        }
+
+
+    }
+
+    .text-container {
+        padding: 0 200px;
+
+        @include medium {
+            padding: 0 100px;
+        }
+
+        @include small2 {
+            padding: 0 80px;
+        }
+
+        @include small3 {
+            padding: 0 40px;
+        }
+    }
+
+    .ideas-paragraph {
+        padding: 0 215px;
+        text-align: justify;
+    }
+
+    .idea-book-images-container {
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to bottom right, $Color-Grey, $Color-Blue, $Color-Grey);
+        align-items: center;
+        padding: 35px 0 10px 0;
+        height: fit-content;
+        row-gap: 50px;
+
+        @include medium4 {
+            row-gap: 30px;
+        }
+    }
+
+    .Explore-Button {
+        display: flex;
+        align-items: flex-end;
+    }
+
+}

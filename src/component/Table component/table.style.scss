@@ -1,0 +1,189 @@
+@import "../../colors.scss";
+@import "../../mixin.scss";
+
+.table {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+
+    @include medium2 {
+        font-size: 16px;
+    }
+
+    @include medium3 {
+        font-size: 14px;
+    }
+
+    @include small1 {
+        font-size: 12px;
+    }
+
+    @include small4 {
+        font-size: 10px;
+    }
+
+    &:not(:first-child) {
+        padding-top: 30px;
+    }
+
+    h5 {
+        font-size: 18px;
+
+        @include medium2 {
+            font-size: 16px;
+        }
+
+        @include medium3 {
+            font-size: 14px;
+        }
+
+        @include medium4 {
+            font-size: 12px;
+        }
+
+        @include small4 {
+            font-size: 10px;
+        }
+    }
+
+    .row {
+        display: flex;
+        align-items: center;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+        border: 1px solid $Color-Black;
+        width: fit-content;
+        background-color: $Color-White;
+
+        @include large {
+            word-spacing: 0;
+            letter-spacing: 0;
+        }
+
+        @include small2 {
+            justify-content: stretch;
+        }
+    }
+
+    .row>* {
+        padding: 15px 10px;
+        flex-wrap: wrap;
+
+        @include medium {
+            padding: 10px 6px;
+        }
+
+        @include small1 {
+            padding: 5px 2px;
+        }
+
+        @include small2 {
+            align-self: stretch;
+        }
+    }
+
+    .row-item {
+        display: flex;
+        column-gap: 20px;
+
+        @include medium {
+            column-gap: 15px;
+        }
+
+        @include medium3 {
+            column-gap: 10px;
+        }
+
+        @include small2 {
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 5px;
+            padding: 5px 20px;
+        }
+
+        @include small2 {
+            padding: 5px 10px;
+        }
+
+        &:not(:last-child) {
+
+            border-right: 1px solid $Color-Black;
+        }
+    }
+
+    .row-item>* {
+        display: flex;
+        justify-content: stretch;
+
+        @include small2 {
+            flex-direction: column;
+        }
+    }
+
+    .student-name {
+        display: flex;
+        column-gap: 20px;
+
+        @include medium {
+            column-gap: 15px;
+        }
+
+        @include medium3 {
+            column-gap: 10px;
+            font-size: 12px;
+            align-items: center;
+        }
+
+        @include medium4 {
+            column-gap: 5px;
+        }
+
+        @include small2 {
+            align-items: flex-start;
+        }
+    }
+
+    .Report-web-video {
+        display: flex;
+        column-gap: 20px;
+        justify-content: stretch;
+
+        @include medium {
+            column-gap: 15px;
+        }
+
+        @include medium3 {
+            column-gap: 10px;
+        }
+
+        @include medium4 {
+
+            column-gap: 5px;
+        }
+
+        @include small2 {
+
+            row-gap: 5px;
+        }
+    }
+
+    .Report-web-video>* {
+        color: $Color-White;
+
+
+    }
+
+    .bg-blue {
+
+        background-color: $Color-Blue;
+    }
+
+    .table-paragraph {
+        line-break: strict;
+
+        @include medium4 {
+
+            font-size: 12px;
+        }
+    }
+}

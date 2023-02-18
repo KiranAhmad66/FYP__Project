@@ -1,0 +1,26 @@
+@import "../../colors.scss";
+
+.pagination {
+    display: flex;
+
+    .page-item {
+        list-style: none;
+        border: 1px solid $Color-Black;
+        background-color: $Color-Grey;
+        cursor: pointer;
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: $Color-Blue;
+        }
+
+        &:hover .page-link {
+            color: $Color-White;
+        }
+
+        .page-link {
+            padding: 5px 10px;
+        }
+
+    }
+}

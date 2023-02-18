@@ -1,0 +1,113 @@
+@import "../../colors.scss";
+@import "../../mixin.scss";
+
+.filter-container {
+    display: grid;
+    grid-template-columns: 100px 100px 200px repeat(2, 170px);
+    justify-content: center;
+    align-items: center;
+    background-color: $Color-Grey;
+    padding: 20px 20px;
+    column-gap: 30px;
+
+    @include medium4 {
+        column-gap: 10px;
+        grid-template-columns: 78px 78px 170px repeat(2, 130px);
+    }
+
+    @include small1 {
+        padding: 10px 10px;
+    }
+
+    @include small2 {
+        grid-template-columns: 56px 56px 131px repeat(2, 103px);
+    }
+
+    @include small4 {
+        grid-template-columns: 45px 44px 108px repeat(2, 85px);
+        padding: 10px 5px;
+    }
+
+    @include small5 {
+        grid-template-columns: 35px 36px 88px repeat(2, 67px);
+    }
+
+    @include small5 {
+        column-gap: 5px;
+    }
+
+    .select {
+        display: grid;
+        grid-template-areas: "select";
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 1.1;
+        align-items: center;
+
+        @include medium4 {
+            font-size: 18px;
+        }
+
+        @include small2 {
+            font-size: 14px;
+        }
+
+        @include small3 {
+            font-size: 12px;
+        }
+
+        @include small5 {
+            font-size: 10px;
+        }
+
+        &::after {
+            content: "";
+            width: 20px;
+            height: 10px;
+            background-color: $Color-Black;
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+
+            @include small2 {
+                width: 15px;
+                height: 8px;
+            }
+
+            @include small4 {
+                width: 12px;
+                height: 5px;
+            }
+        }
+
+        &:after {
+            grid-area: select;
+            justify-self: end;
+        }
+
+
+    }
+
+    select {
+        grid-area: select;
+        appearance: none;
+        // Additional resets for further consistency
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        outline: none;
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+
+
+
+
+}

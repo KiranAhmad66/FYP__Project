@@ -1,4 +1,7 @@
+@import "./colors.scss";
+
 body {
+  color: $Color-Black;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 
@@ -15,6 +18,10 @@ body {
 }
 
 a {
+  color: $Color-Black;
   text-decoration: none;
-  color: #333;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

@@ -1,0 +1,104 @@
+@import "../../colors.scss";
+
+.fyp-container {
+
+    .fyp-content {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 100px;
+    }
+
+    .fyp-heading {
+        display: flex;
+        background-color: #d9d9d9;
+        justify-content: flex-start;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
+
+
+    .fyp-heading-text {
+        padding: 10px 50px;
+        width: 25vw;
+    }
+
+    .fyp-text {
+        padding-left: 30px;
+    }
+
+    .fyp-topic-table {
+        display: flex;
+        align-items: center;
+        background-color: $Color-Grey;
+        width: max-content;
+        border: 1px solid $Color-Black;
+        margin: 30px 0;
+    }
+
+    .technical-topic {
+        font-size: 12px;
+        padding: 0 30px;
+
+    }
+
+    .technical-topic-name {
+        display: flex;
+        border-left: 1px solid $Color-Black;
+        flex-direction: column;
+    }
+
+    .technical-topic-name-r {
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $Color-Black;
+        }
+    }
+
+    .technical-row-item {
+        font-size: 18px;
+        padding: 10px 30px 10px 10px;
+        border-right: 1px solid $Color-Black;
+    }
+
+    .approach-table {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $Color-Black;
+        margin-bottom: 30px;
+
+    }
+
+    .approach-row {
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    .approach-row-item {
+        display: flex;
+        justify-content: center;
+        background-color: $Color-Grey;
+        border: 1px solid $Color-Black;
+        width: 20vw;
+
+
+
+    }
+
+    .A-row-1 {
+        margin: 0 5%;
+    }
+
+    .A-row-2 {
+        margin: 0 10%;
+    }
+
+    .approach-text {
+        font-size: 18px;
+        padding: 10px 50px;
+
+    }
+}

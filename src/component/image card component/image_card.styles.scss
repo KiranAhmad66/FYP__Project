@@ -1,0 +1,87 @@
+@import "../../colors.scss";
+@import "../../mixin.scss";
+
+.card-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    padding: 0 40px;
+    cursor: pointer;
+
+    &:hover .image-text {
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+
+    @include medium {
+        padding: 0 30px;
+    }
+
+
+
+}
+
+.image {
+    position: relative;
+    width: 17vw;
+    height: 35vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: filter 0.1s;
+
+    @include medium4 {
+        width: 30vw;
+        height: 30vh;
+    }
+
+    @include small3 {
+        width: 60vw;
+    }
+
+}
+
+.image-text {
+    position: absolute;
+    color: $Color-White;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(50%);
+    padding: 0 10px;
+    line-break: strict;
+    transition: all 1s;
+
+
+    @include medium4 {
+        opacity: 1;
+        font-size: 18px;
+        padding: 0 15px;
+        transform: translateY(-50%);
+
+    }
+
+    @include small2 {
+        font-size: 16px;
+        padding: 0 12px;
+
+    }
+
+    @include small3 {
+        font-size: 14px;
+        padding: 0 10px;
+
+    }
+
+    p {
+        padding-top: 8px;
+        font-size: 18px;
+        font-weight: 300;
+
+        @include medium4 {
+            font-size: 12px;
+        }
+    }
+}
